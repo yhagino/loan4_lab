@@ -1,0 +1,16 @@
+## check mysql
+pym shell
+import logging
+l = logging.getLogger('django.db.backends')
+l.setLevel(logging.DEBUG)
+l.addHandler(logging.StreamHandler())
+from django.contrib.auth.models import modelsName
+
+con_limit = Q(limit_id__gte=10)
+modelsName.objects.filter(con_limit )
+
+## text : filter
+https://qiita.com/nachashin/items/d3f9cd637a9cecbda72c
+
+## ssl
+https://note.com/toast_cs/n/ncf89d20cabf3

@@ -1,0 +1,44 @@
+{% extends 'lab/base.html' %}
+{% block content %}
+  {% include 'lab/form.html' %}
+  {% for item in item_list %}
+    {% if item.loan4 %}
+     <div class="card mb-3">
+      <div class="card-body">
+        <div class="media">
+        {% if item.kariretaImages2_250250 %}
+          <img class="item_list_img d-flex align-self-start mr-3" src="{{ item.kariretaImages2_250250 }}" alt="">
+        {% endif %}
+          <div class="media-body">
+            <h2 class="mt-0">{{ item.name }}</h2>
+            <p class="card-text break">{{ item.point | safe }}</p>
+            <div class="alert alert-info" role="alert">
+                実質年率<strong class="pl-5">{{ item.Annualrate }}</strong>
+            </div>
+            <div class="alert alert-warning" role="alert">
+                最短融資<strong class="pl-5">{{ item.loantime }}</strong>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content mb-1 mx-auto">
+        {% if item.sokujitu %}<span class="item_list_tag alert alert-light small">即日融資可能</span> {% endif %}
+        {% if item.murisoku %}<span class="item_list_tag alert alert-light small">無利息期間</span>{% endif %}
+        {% if item.teirate %}<span class="item_list_tag alert alert-light small"> 低い利率</span>{% endif %}
+        {% if item.highlimit %}<span class="item_list_tag alert alert-light small">高い限度額</span>{% endif %}
+        {% if item.compWeb %}<span class="item_list_tag alert alert-light small">Web完結</span>{% endif %}
+        {% if item.noneCheck %}<span class="item_list_tag alert alert-light small">在籍確認不要</span>{% endif %}
+        {% if item.raitenhuyou %}<span class="item_list_tag alert alert-light small">来店不要</span>{% endif %}
+        {% if item.syunyuusyoumei %}<span class="item_list_tag alert alert-light small">収入証明不要</span>{% endif %}
+        {% if item.applyWeekend %}<span class="item_list_tag alert alert-light small">土日祝日可能</span>{% endif %}
+        {% if item.shufu %}<span class="item_list_tag alert alert-light small"> 専業主婦向け</span>{% endif %}
+        </div>
+        <div class="row justify-content mt-3">
+          <a href="{{ item.kariretaLinkurl }}l4-" class="mx-auto col-8 btn btn-block btn-info item_list_btn">今すぐ申込む</a>
+{#          <a href="#!" class="mx-auto d-block text-center col-8 small mt-2">詳細はこちら</a>#}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+  {% include 'lab/article_col.html' %}
+{% endblock %}

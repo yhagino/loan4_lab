@@ -1,0 +1,13 @@
+{% extends 'lab/base.html' %}
+
+{% block content %}
+
+     <div class="card arti_box">
+      <div class="card-body">
+        <h4 class="card-title arti_tit">{{ article.title }}</h4>
+        <p class="card-subtitle mb-2 text-muted small arti_tag">{{ article.category }}</p>
+        <div class="arti_d_body">{{ article.text | safe | urlize}}</div>
+      </div>
+    </div>
+
+{% endblock %}

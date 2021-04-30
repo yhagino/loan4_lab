@@ -1,0 +1,15 @@
+<div class="card-columns">
+<h2>お役立ち情報</h2>
+  {% for article in article_l %}
+    <a href="{% url 'lab:detail_article' article.pk %}" class="card-link float-right arti_link">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title text-dark">{{ article.title }}</h4>
+      <p class="card-text text-muted">{{ article.text | truncatechars:70 | striptags }}</p>
+      <a href="{% url 'lab:detail_article' article.pk %}" class="card-link float-right arti_link">続きを読む</a>
+    </div>
+  </div>
+    </a>
+  {% endfor %}
+
+</div>

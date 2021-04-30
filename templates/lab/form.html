@@ -1,0 +1,57 @@
+<form class="form form_search" method="GET", action="{% url 'lab:index' %}">
+  {% csrf_token %}
+<h2 class="form_tit_h2">カードローン詳細検索</h2>
+  <div class="row">
+<div class="form-group col-sm-12 col-md-6">
+  <label class="control-label form_tit col-12" name="loantime_id">融資時間</label>
+  <div class="">
+    <select class="form-control">
+      <option value="">特に気にしない</option>
+      <option value="1">今すぐ</option>
+      <option value="24">今日中</option>
+    </select>
+  </div>
+</div>
+<div class="form-group col-sm-12 col-md-6">
+  <label class="control-label form_tit col-12">希望限度額</label>
+  <div class="">
+    <select class="form-control" name="limit_id">
+      <option value="">特に気にしない</option>
+      <option value="10">10万円以上</option>
+      <option value="50">50万円以上</option>
+      <option value="100">100万円以上</option>
+      <option value="150">150万円以上</option>
+      <option value="200">200万円以上</option>
+      <option value="250">250万円以上</option>
+    </select>
+  </div>
+</div>
+  </div>
+  <div class="row">
+<div class="form-group col-sm-12 col-md-6">
+  <label class="control-label form_tit col-12">重視する点</label>
+  <div class="radio">
+    <label><input type="radio" name="sokujitu" value="1">とにかく早く借りたい</label>
+    <label><input type="radio" name="teirate" value="1">低金利で借入希望</label>
+    <label><input type="radio" name="biz" value="1">自営業・事業主に融資可能</label>
+    <label><input type="radio" name="part" value="1">パート・アルバイトOK</label>
+    <label><input type="radio" name="shufu" value="1">専業主婦の方向け</label>
+  </div>
+</div>
+<div class="form-group col-sm-12 col-md-6">
+  <label class="control-label form_tit col-12">すでに借入しているところ</label>
+  <div class="checkbox">
+    <label><input type="checkbox" name="diff" value="aiful">アイフル</label>
+    <label><input type="checkbox" name="diff" value="acom">アコム</label>
+    <label><input type="checkbox" name="diff" value="promis">プロミス</label>
+    <label><input type="checkbox" name="diff" value="mobit">モビット</label>
+    <label><input type="checkbox" name="diff" value="rakealsa">レイクALSA</label>
+  </div>
+</div>
+  </div>
+<div class="form-group">
+  <div class="col-10 mx-auto justify-content">
+    <button class="btn btn-default form_btn">検索</button>
+  </div>
+</div>
+</form>

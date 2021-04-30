@@ -1,0 +1,204 @@
+:root {
+    --primary: #00BCD4;
+    --dark-primary: #0097A7;
+    --ddark-primary: #008ba3;
+    --lite-primary: #62efff;
+    --llite-primary: #b2ebf2;
+    --llite-primary: #e0f7fa;
+    --accent-color: #cddc39;
+    --lite-accent-color: #ffff6e;
+    --bg-light: #f8f8f8;
+    --btn-shadow: 0 5px 4px 0px rgba(0,0,0,.2);
+}
+em{
+    background: linear-gradient(transparent 60%, #ffff66 60%);
+}
+body{
+    /*background-color: var(--bg-light);*/
+}
+.jumbotron{
+    background: radial-gradient(var(--llite-primary), var(--dark-primary));
+}
+.display-3{
+    color: var(--dark-primary);
+    text-shadow: 0 0 7px #ffffff, 0 0 7px #ffffff, 0 0 7px #ffffff,
+    0 0 7px #ffffff, 0 0 7px #ffffff, 0 0 7px #ffffff, 0 0 7px #ffffff,
+    0 0 7px #ffffff, 0 0 7px #ffffff, 0 0 7px #ffffff, 0 0 7px #ffffff,
+    0 0 7px #ffffff, 0 0 7px #ffffff, 0 0 7px #ffffff, 0 0 7px #ffffff,
+    0 0 7px #ffffff;
+}
+@media screen and (max-width:768px){
+    .display-3{
+        font-size: 2.5rem;
+    }
+}
+.jumb_ul{
+    display: inline-flex;
+    justify-content: space-around;
+    width: 60%;
+    padding: 0;
+}
+@media screen and (max-width:768px){
+    .jumb_ul{
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+.jumb_li{
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    color: var(--primary);
+    font-weight: bold;
+    padding: 0.5em 0.8em;
+    background-color: var(--llite-primary);
+    font-size: 1.5rem;
+    list-style: none;
+}
+@media screen and (max-width:768px){
+    .jumb_li{
+        font-size: 1rem;
+        padding: 0.3em 0.4em;
+    }
+}
+.header_area{
+    /*background-color: var(--primary);*/
+    margin-bottom: 0;
+}
+.cnt-l{
+    box-sizing: border-box;
+    padding:20px 4%;
+
+}
+.cnt-l_h1{
+    margin: 0.6em;
+}
+.cnt-r{
+    background-color: var(--bg-light);
+    padding: 20px 4%;
+}
+.cnt-r_h2{
+    margin-top: 20px;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--primary);
+    font-weight: 400;
+    padding-bottom: 15px;
+    color: var(--ddark-primary);
+    font-weight: bold;
+}
+.cnt-r_list{
+    margin-top: 10px;
+    color: #0C3C26;
+    text-decoration: underline;
+}
+.r_a{
+    color: inherit;
+}
+.r_card_img{
+    max-width: 90%;
+    height: auto;
+    margin: 5px auto 10px;
+    text-align: center;
+    display: block;
+}
+.r_tags_ul{
+    padding: 0;
+}
+.r_tags_li{
+    display: inline-flex;
+    list-style: none;
+    color: #818182;
+    background-color: #fefefe;
+    border-radius: .25rem;
+    border: 1px solid #818182;
+    padding: 0.3em 0.5em;
+    margin: 0.4em 0.2em;
+}
+.item_list_img{
+    max-width: 200px !important;
+    height: auto;
+}
+.item_list_tag{
+    border: 1px solid #818182;
+    padding: 0.3em 0.5em;
+    margin: 0.2em;
+}
+.item_list_btn{
+    background-color: var(--dark-primary);
+}
+@media screen and (max-width:768px){
+    .item_list_img{
+        max-width: 100% !important;
+        height: auto;
+        margin: 5px auto 10px !important;
+        /*text-align: center;*/
+        display: block;
+    }
+    .media{
+        display: inline-block;
+    }
+}
+.form_search{
+    background-color: var(--bg-light);
+    padding: 1em 0.8em;
+    margin-bottom: 2em;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.form_tit_h2{
+    background-color: var(--dark-primary);
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.3em 0.5em;
+    border-bottom: 3px solid var(--primary);
+}
+.form_tit{
+    margin: 5px 0 10px;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--primary);
+    font-weight: 400;
+    padding-bottom: 5px;
+    color: var(--ddark-primary);
+}
+input[type=checkbox], input[type=radio]{
+    margin-right: 0.3em;
+}
+.form_btn{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.arti_box{
+    margin-bottom: 10px;
+}
+.arti_tit{
+    border-bottom: 2px solid var(--primary);
+    padding: 0.3em 0.5em;
+    margin-bottom: 0.5em;
+}
+.arti_tag{
+    display: inline-block;
+    border: 1px solid #818182;
+    padding: 0.3em 0.5em;
+    margin: 0.2em 0.2em 0.5em;
+    border-radius: 5px;
+}
+.arti_d_body h2{
+    margin: 50px 0.5em 20px;
+    font-size: 1.3rem;
+}
+.arti_d_body h3{
+    margin: 50px 0.5em 20px;
+    font-size: 1.1rem;
+}
+.arti_d_body p{
+    line-height:1.8;
+    margin-left:5%;
+    margin-right:5%;
+}
+.footer_link{
+    margin-bottom: 20px;
+}
+.footer_link a{
+    color: var(--accent-color) !important;
+}

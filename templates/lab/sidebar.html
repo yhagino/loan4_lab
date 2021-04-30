@@ -1,0 +1,34 @@
+<h2 class="cnt-r_h2">おすすめカードローン一覧</h2>
+{% for item in item_l %}
+  {% if item.loan4 %}
+    <div class="card mb-3">
+    <a href="{{ item.kariretaLinkurl }}l4-" class="r_a"><div class="card-body">
+      <h4 class="card-title">{{ item.name }}</h4>
+      {% if item.kariretaImages2_32050 %}
+        <img class="card-img-top r_card_img" src="{{ item.kariretaImages2_32050 }}" alt="Card image cap">
+      {% endif %}
+      <table class="table table-sm mt-3">
+          <tr>
+            <th class="thead-light small">実質年率</th>
+            <td class="small">{{ item.Annualrate }}</td>
+          </tr>
+          <tr>
+            <th class="thead-light small">最短融資</th>
+            <td class="small">{{ item.loantime }}</td>
+          </tr>
+          <tr>
+            <th class="thead-light small">借入限度額</th>
+            <td class="small">{{ item.limit }}</td>
+          </tr>
+      </table>
+    </div></a>
+    </div>
+  {% endif %}
+{% endfor %}
+{#          <h2 class="cnt-r_h2">おすすめ記事一覧</h2>#}
+{#          <h2 class="cnt-r_h2">カテゴリ一覧</h2>#}
+{#          <ul class="r_tags_ul">#}
+{#          {% for category in category_list %}#}
+{#            <li class="r_tags_li small">{{ category }}</li>#}
+{#          {% endfor %}#}
+{#          </ul>#}
