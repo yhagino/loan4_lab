@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1sl_ab-&agcofhah3r3ga-3#%05o+41gqxt$$5bg$zh-a1pwl7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -74,20 +74,36 @@ WSGI_APPLICATION = 'loan4.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 DATABASES = {
-     'default': {
+    #  'default': {
+    #      'ENGINE': 'django.db.backends.mysql',
+    #      'NAME': 'django',
+    #      'USER': 'loan4',
+    #      'PASSWORD': 'h,77A36ZgLDTq2}p',
+    #      'HOST': '160.251.76.75',
+    #      'PORT': '3306',
+    #  },
+    #  'finance': {
+    #      'ENGINE': 'django.db.backends.mysql',
+    #      'NAME': 'finance',
+    #     'USER': 'loan4',
+    #      'PASSWORD': 'h,77A36ZgLDTq2}p',
+    #      'HOST': '160.251.76.75',
+    #      'PORT': '3306',
+    # },
+         'default': {
          'ENGINE': 'django.db.backends.mysql',
-         'NAME': 'django',
-         'USER': 'loan4',
-         'PASSWORD': 'h,77A36ZgLDTq2}p',
-         'HOST': '160.251.76.75',
+         'NAME': 'loan4',
+         'USER': 'root',
+         'PASSWORD': '',
+         'HOST': 'localhost',
          'PORT': '3306',
      },
      'finance': {
          'ENGINE': 'django.db.backends.mysql',
          'NAME': 'finance',
-        'USER': 'loan4',
-         'PASSWORD': 'h,77A36ZgLDTq2}p',
-         'HOST': '160.251.76.75',
+         'USER': 'root',
+         'PASSWORD': '',
+         'HOST': 'localhost',
          'PORT': '3306',
     }
 }
