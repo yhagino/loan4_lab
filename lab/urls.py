@@ -5,8 +5,9 @@ app_name ='lab'
 
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
+    # path('?adid=<str:adid>', views.IndexView.as_view(), name='adid'),
     path('article/', views.ArticleView.as_view(), name='article'),
     path('category/<int:pk>/', views.CategoryView.as_view(), name='category'),
     path('detail/<int:pk>/', views.ArticleDetailView.as_view(), name='detail_article'),
-    path('company/', views.company, name='company')
+    path('company/', views.company, name='company'),
 ]

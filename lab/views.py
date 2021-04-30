@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404
 from django.db.models import Q
 from django.http import HttpResponse
 from django.template import Context, loader
+from django.views.generic import TemplateView
 
 from .models import Item, Article, Category
 
@@ -68,6 +69,18 @@ class IndexView(generic.ListView):
         )
         return queryset
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        if self.request.GET.get('adid'):
+            adid = self.request.GET.get('adid')
+            context['adid'] = adid  # セッションに'adid'という名前のキーで保存する。
+            self.request.session['adid'] = adid
+        elif self.request.session.get('adid'):
+            context['adid'] = self.request.session.get('adid')
+        else:
+            context['adid'] = ''
+        return context
+
 
 class CategoryView(generic.ListView):
     model = Article
@@ -77,6 +90,18 @@ class CategoryView(generic.ListView):
         category = get_object_or_404(Category, pk=self.kwargs['pk'])
         queryset = Article.objects.filter(category=category)
         return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        if self.request.GET.get('adid'):
+            adid = self.request.GET.get('adid')
+            context['adid'] = adid  # セッションに'adid'という名前のキーで保存する。
+            self.request.session['adid'] = adid
+        elif self.request.session.get('adid'):
+            context['adid'] = self.request.session.get('adid')
+        else:
+            context['adid'] = ''
+        return context
 
 
 class ArticleView(generic.ListView):
@@ -92,9 +117,33 @@ class ArticleView(generic.ListView):
         #     )
         return queryset
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        if self.request.GET.get('adid'):
+            adid = self.request.GET.get('adid')
+            context['adid'] = adid  # セッションに'adid'という名前のキーで保存する。
+            self.request.session['adid'] = adid
+        elif self.request.session.get('adid'):
+            context['adid'] = self.request.session.get('adid')
+        else:
+            context['adid'] = ''
+        return context
+
 
 class ArticleDetailView(generic.DetailView):
     model = Article
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        if self.request.GET.get('adid'):
+            adid = self.request.GET.get('adid')
+            context['adid'] = adid  # セッションに'adid'という名前のキーで保存する。
+            self.request.session['adid'] = adid
+        elif self.request.session.get('adid'):
+            context['adid'] = self.request.session.get('adid')
+        else:
+            context['adid'] = ''
+        return context
 
 
 def company(request):

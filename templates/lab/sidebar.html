@@ -2,7 +2,7 @@
 {% for item in item_l %}
   {% if item.loan4 %}
     <div class="card mb-3">
-    <a href="{{ item.kariretaLinkurl }}l4-" class="r_a"><div class="card-body">
+    <a href="{{ item.kariretaLinkurl }}l4-{{ adid }}" class="r_a"><div class="card-body">
       <h4 class="card-title">{{ item.name }}</h4>
       {% if item.kariretaImages2_32050 %}
         <img class="card-img-top r_card_img" src="{{ item.kariretaImages2_32050 }}" alt="Card image cap">
