@@ -2,7 +2,7 @@ info.txt
 # Created by https://www.gitignore.io/api/django
 # Edit at https://www.gitignore.io/?templates=django
 ### Django ###
-loan4/settings.py
+#loan4/settings.py
 **/pass_sql.py
 *.log
 *.pot
