@@ -14,3 +14,9 @@ https://qiita.com/nachashin/items/d3f9cd637a9cecbda72c
 
 ## ssl
 https://note.com/toast_cs/n/ncf89d20cabf3
+
+## apply templates/html files
+https://qiita.com/sausagedog/items/598ec1ea7ce7ed756bbf
+need to restart gunicorn
+ps aux | grep gunicorn
+kill -HUP <一番小さいプロセスID>
