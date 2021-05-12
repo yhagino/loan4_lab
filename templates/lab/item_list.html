@@ -36,7 +36,7 @@
           <a href="{{ item.kariretaLinkurl }}l4-{{ adid }}" class="mx-auto col-8 btn btn-block btn-info item_list_btn">今すぐ申込む</a>
 {#          <a href="#!" class="mx-auto d-block text-center col-8 small mt-2">詳細はこちら</a>#}
         </div>
-        <p class="small">{{ item.attention }}</p>
+        <p class="small">{{ item.attention | safe }}</p>
       </div>
     </div>
     {% endif %}
