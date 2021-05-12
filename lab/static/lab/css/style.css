@@ -10,6 +10,9 @@
     --bg-light: #f8f8f8;
     --btn-shadow: 0 5px 4px 0px rgba(0,0,0,.2);
 }
+p.small{
+    font-size: 8px;
+}
 em{
     background: linear-gradient(transparent 60%, #ffff66 60%);
 }

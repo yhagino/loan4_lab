@@ -31,6 +31,7 @@ class Item(models.Model):
     shufu = models.IntegerField(default=0)
     syunyuusyoumei = models.IntegerField(default=0)
     highlimit = models.IntegerField(default=0)
+    attention = models.TextField(null=True)
 
     def __str__(self):
         return self.name
