@@ -19,4 +19,4 @@ https://note.com/toast_cs/n/ncf89d20cabf3
 https://qiita.com/sausagedog/items/598ec1ea7ce7ed756bbf
 need to restart gunicorn
 ps aux | grep gunicorn
-kill -HUP <一番小さいプロセスID>
+kill -HUP [most smallest ID]
