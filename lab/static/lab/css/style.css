@@ -68,6 +68,11 @@ body{
     /*background-color: var(--primary);*/
     margin-bottom: 0;
 }
+.header_area span{
+    display: flex;
+    flex-basis: 0%;
+    justify-content: flex-end;
+}
 .cnt-l{
     box-sizing: border-box;
     padding:20px 4%;
